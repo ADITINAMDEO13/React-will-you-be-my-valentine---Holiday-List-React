@@ -16,13 +16,13 @@ class App extends Component {
 
   render() {
     
-    let filteredIndianCity=this.cityList.filter((city,index)=>(city.country=='India' ));
+    let filteredCity=this.cityList.filter((city,i)=>(city.country=='India' ));
    
-    let updatedList = [...filteredIndianCity];
+    let updatedList = [...filteredCity];
     return (
       <div id="main">
         <ol>
-            {updatedList.map((city,index)=> <li key={`location${index+1}`}>{city.name}(India)</li>)}
+            {updatedList.map((city,i)=> <li key={`location${i+1}`}>{city.name}(India)</li>)}
         </ol>
         {/* Do not remove the main div */}
       </div>
